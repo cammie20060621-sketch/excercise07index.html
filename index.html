@@ -1,34 +1,37 @@
 <!DOCTYPE html>
-<html>
-
-<style>
-table {
-  border-collapse: collapse;
-}
-
-table, th, td {
-  border: 1px solid black;
-}
-
-th, td {
-  padding: 5px;
-  text-align: left;
-}
-</style>
-
-
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 範例首頁</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .link-list a {
+            display: block;
+            margin: 15px 0;
+            font-size: 18px;
+            color: #2980b9;
+            text-decoration: none;
+        }
+        .link-list a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
+    <h1>HTML 範例首頁</h1>
+    <p>點擊下面連結打開不同的範例頁面：</p>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Student ID</th>
-  </tr>
-  <tr>
-    <td>Min-Yun Hseuh</td>
-    <td>113403528</td>
-  </tr>
-</table>
-
+    <div class="link-list">
+        <a href="iframe.html" target="_blank">iframe 範例</a>
+        <a href="itable.html" target="_blank">表格範例</a>
+    </div>
 </body>
 </html>
