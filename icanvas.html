@@ -2,25 +2,50 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Canvas Example</title>
+<title>Shapes</title>
+
+<style>
+
+.container{
+  position: relative;
+  width: 400px;
+  height: 250px;
+}
+
+.rectangle{
+  width:200px;
+  height:150px;
+  background:blue;
+  border:5px solid black;
+  position:absolute;
+  left:20px;
+  top:40px;
+}
+
+.circle{
+  width:150px;
+  height:150px;
+  background:yellow;
+  border:10px solid red;
+  border-radius:50%;
+  position:absolute;
+  left:120px;
+  top:50px;
+}
+
+</style>
+
 </head>
+
 <body>
-<canvas id="myCanvas" width="400" height="250"></canvas>
-<script>
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.geyContext("2d");
-ctx.fillStyle = "blue";
-ctx.fillRect(50, 80, 200, 150);
 
-/* circle */
-ctx.beginPath();
-ctx.arc(200, 150, 75, 0, 2 * Math.PI);
-ctx.fillStyle = "yellow";
-ctx.fill();
-ctx.lineWidth = 8;
-ctx.strokeStyle = "red";
-ctx.stroke();
+<div class="container">
 
-</script>
+<div class="rectangle"></div>
+
+<div class="circle"></div>
+
+</div>
+
 </body>
 </html>
