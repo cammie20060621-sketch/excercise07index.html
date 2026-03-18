@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas Example</title>
+</head>
+<body>
+<canvas id="myCanvas" width="400" height="250"></canvas>
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.geyContext("2d");
+ctx.fillStyle = "blue";
+ctx.fillRect(50, 80, 200, 150);
+
+/* circle */
+ctx.beginPath();
+ctx.arc(200, 150, 75, 0, 2 * Math.PI);
+ctx.fillStyle = "yellow";
+ctx.fill();
+ctx.lineWidth = 8;
+ctx.strokeStyle = "red";
+ctx.stroke();
+
+</script>
+</body>
+</html>
