@@ -4,16 +4,36 @@
 <title>Headings and Outlines</title>
 <style>
   /* 設定所有的標題都使用預設的襯線字體，符合圖片樣式 */
-  h1, h2, h3 {
+ .container {
+    width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 5px 5px 10px gray;
+}
+ h1, h2, h3 {
     font-family: "Times New Roman", Times, serif;
   }
 
   /* Heading 1: 頂部邊框與文字陰影 */
-  h1 {
-    border-top: 3px solid black; /* 頂部黑色實線 */
-    text-shadow: 3px 3px pink;   /* 粉紅色文字陰影 (水平偏移, 垂直偏移, 顏色) */
-    padding-top: 5px;            /* 讓黑線跟文字稍微保持一點距離 */
-  }
+ h1 {
+    display: inline-block;   /* 讓寬度只等於文字 */
+    position: relative;
+    padding-top: 15px;
+    text-shadow: 3px 3px pink;
+}
+
+/* 畫上方那條線 */
+h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;             /* 跟文字一樣長 */
+    height: 5px;
+    background: black;
+    box-shadow: 3px 3px pink;  /* 線的粉色陰影 */
+}
 
   /* Heading 2: 細邊框、黃色外框與斜體 */
   h2 {
