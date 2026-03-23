@@ -1,80 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<mwta charset="UTF-8">
+<title>Headings and Outlines</title>
 <style>
-body {
-    background-color: #eee;
-    font-family: "Times New Roman", serif;
-}
+  /* 設定所有的標題都使用預設的襯線字體，符合圖片樣式 */
+  h1, h2, h3 {
+    font-family: "Times New Roman", Times, serif;
+  }
 
-/* 外框 */
-.container {
-    width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 5px 5px 10px gray;
-}
+  /* Heading 1: 頂部邊框與文字陰影 */
+  h1 {
+    border-top: 3px solid black; /* 頂部黑色實線 */
+    text-shadow: 3px 3px pink;   /* 粉紅色文字陰影 (水平偏移, 垂直偏移, 顏色) */
+    padding-top: 5px;            /* 讓黑線跟文字稍微保持一點距離 */
+  }
 
-/* Heading 1 */
-h1 {
-    display: inline-block;   /* 讓寬度只等於文字 */
-    position: relative;
-    padding-top: 15px;
-    text-shadow: 3px 3px pink;
-}
+  /* Heading 2: 細邊框、黃色外框與斜體 */
+  h2 {
+    font-style: italic;          /* 設定斜體 */
+    border: 1px solid black;     /* 內層的黑色細邊框 */
+    outline: 3px solid yellow;   /* 題目特別強調的 outline，會在 border 外面再畫一圈 */
+    padding: 5px;                /* 內邊距，讓文字不要貼在黑線上 */
+    margin: 10px 0;              /* 外邊距，避免黃色外框被切到 */
+  }
 
-/* 畫上方那條線 */
-h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;             /* 跟文字一樣長 */
-    height: 5px;
-    background: black;
-    box-shadow: 3px 3px pink;  /* 線的粉色陰影 */
-}
-
-/* Heading 2 */
-.h2 {
-    font-size: 30px;
-    font-style: italic;
-    border: 3px solid yellow;
-    outline: 1px solid black;
-    padding: 5px;
-    margin-bottom: 20px;
-}
-
-/* Heading 3 */
-h3 {
-    display: inline-block;   /* 關鍵：寬度=文字 */
-    position: relative;
-    text-align: right;
-    margin-top: 40px;
-}
-
-/* 底線 */
-h3::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;        /* 線在文字下面 */
-    width: 100%;         /* 跟文字一樣長 */
-    height: 3px;
-    background: black;
-}
+  /* Heading 3: 靠右對齊與底線 */
+  h3 {
+    text-align: right;           /* 靠右對齊 */
+    text-decoration: underline;  /* 文字加上底線 */
+  }
 </style>
 </head>
-
 <body>
 
-<div class="container">
-    <div class="h1">This is heading 1</div>
-    <div class="h2">This is heading 2</div>
-    <div class="h3">This is heading 3</div>
-</div>
+  <h1>This is heading 1</h1>
+  <h2>This is heading 2</h2>
+  <h3>This is heading 3</h3>
 
 </body>
 </html>
