@@ -7,6 +7,8 @@ body {
     background-color: #eee;
     font-family: "Times New Roman", serif;
 }
+
+/* 外框 */
 .container {
     width: 600px;
     margin: 50px auto;
@@ -15,42 +17,32 @@ body {
     box-shadow: 5px 5px 10px gray;
 }
 
-  /* Heading 1: 頂部邊框與文字陰影 */
+/* Heading 1 */
 h1 {
-    display: inline-block;   /* 讓寬度只等於文字 */
-    position: relative;
-    padding-top: 15px;
-    text-shadow: 3px 3px pink;
+    border-top: 5px solid black;
+    padding-top: 10px;
+    margin-bottom: 20px;
 }
 
-/* 畫上方那條線 */
-h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;             /* 跟文字一樣長 */
-    height: 5px;
-    background: black;
-    box-shadow: 3px 3px pink;  /* 線的粉色陰影 */
-}
-  /* Heading 2: 細邊框、黃色外框與斜體 */
+/* Heading 2 */
 h2 {
-    font-style: italic;          /* 設定斜體 */
-    border: 1px solid black;     /* 內層的黑色細邊框 */
-    outline: 3px solid yellow;   /* 題目特別強調的 outline，會在 border 外面再畫一圈 */
-    padding: 5px;                /* 內邊距，讓文字不要貼在黑線上 */
-    margin: 10px 0;              /* 外邊距，避免黃色外框被切到 */
+    border: 3px solid yellowgreen;
+    padding: 10px;
+    font-style: italic;
 }
 
-  /* Heading 3: 靠右對齊與底線 */
+/* Heading 3 */
 h3 {
-    text-align: right;           /* 靠右對齊 */
-    text-decoration: underline;  /* 文字加上底線 */
+    text-align: right;
+    text-decoration: underline;
+    margin-top: 40px;
 }
 </style>
+
 </head>
+
 <body>
+
 <div class="container">
     <h1>This is heading 1</h1>
     <h2>This is heading 2</h2>
