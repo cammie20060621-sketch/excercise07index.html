@@ -18,14 +18,23 @@ body {
 }
 
 /* Heading 1 */
-.h1 {
-    font-size: 40px;
-    font-weight: bold;
-    border-top: 4px solid black;
+h1 {
+    display: inline-block;   /* 讓寬度只等於文字 */
+    position: relative;
     padding-top: 15px;
-    margine-top: 0;
-    margin-bottom: 20px;
     text-shadow: 3px 3px pink;
+}
+
+/* 畫上方那條線 */
+h1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;             /* 跟文字一樣長 */
+    height: 5px;
+    background: black;
+    box-shadow: 3px 3px pink;  /* 線的粉色陰影 */
 }
 
 /* Heading 2 */
@@ -39,11 +48,22 @@ body {
 }
 
 /* Heading 3 */
-.h3 {
+h3 {
+    display: inline-block;   /* 關鍵：寬度=文字 */
+    position: relative;
     text-align: right;
-    font-size: 20px;
-    font-weight: bold;
-    border-bottem:4px solid black;
+    margin-top: 40px;
+}
+
+/* 底線 */
+h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;        /* 線在文字下面 */
+    width: 100%;         /* 跟文字一樣長 */
+    height: 3px;
+    background: black;
 }
 </style>
 </head>
