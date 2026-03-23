@@ -16,24 +16,11 @@
   }
 
   /* Heading 1: 頂部邊框與文字陰影 */
- h1 {
-    display: inline-block;   /* 讓寬度只等於文字 */
-    position: relative;
-    padding-top: 15px;
-    text-shadow: 3px 3px pink;
-}
-
-/* 畫上方那條線 */
- h1::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;             /* 跟文字一樣長 */
-    height: 5px;
-    background: black;
-    box-shadow: 3px 3px pink;  /* 線的粉色陰影 */
-}
+  h1 {
+    border-top: 3px solid black; /* 頂部黑色實線 */
+    text-shadow: 3px 3px pink;   /* 粉紅色文字陰影 (水平偏移, 垂直偏移, 顏色) */
+    padding-top: 5px;            /* 讓黑線跟文字稍微保持一點距離 */
+  }
 
   /* Heading 2: 細邊框、黃色外框與斜體 */
   h2 {
