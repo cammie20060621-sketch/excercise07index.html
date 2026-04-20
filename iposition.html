@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* 表格樣式 */
+        table {
+            border-collapse: collapse;
+            margin: 50px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        th {
+            background-color: gray;
+            color: white;
+        }
+
+        /* 不同列背景 */
+        .row1 {
+            background-color: yellow;
+        }
+
+        .row2 {
+            background-color: lightgray;
+        }
+
+        .row3 {
+            background-color: yellow;
+        }
+
+        /* 固定在右上角的 div */
+        .fixed-box {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            border: 3px solid green;
+            padding: 15px;
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 表格 -->
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+        </tr>
+        <tr class="row1">
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr class="row2">
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr class="row3">
+            <td>3</td>
+            <td>3</td>
+        </tr>
+    </table>
+
+    <!-- 固定位置的 div -->
+    <div class="fixed-box">
+        This div element has position: fixed;
+    </div>
+
+</body>
+</html>
