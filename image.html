@@ -1,61 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
-<meta charset="UTF-8">
-<title>CSS Image Styling</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Image Styling Practice</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 50px;
+            font-family: Arial, sans-serif;
+        }
 
-<style>
-body {
-    background: #eee;
-    padding: 40px;
-    font-family: Arial;
-}
+        /* 共用基礎樣式 */
+        img {
+            height: 300px; /* 依照標記統一高度 */
+        }
 
-/* 排版 */
-.container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        /* 左側圖片：圓角、無變形、寬度33% */
+        .img-left {
+            width: 33%;
+            border-radius: 18px; /* 設定 18px 圓角 */
+            object-fit: cover;    /* 關鍵：防止圖片被擠壓變形 */
+        }
 
-/* 左圖：圓角 + 不變形 */
-.img-left {
-    width: 33%;
-    height: 300px;
-    border-radius: 18px;
-    object-fit: cover; /* 關鍵：不變形 */
-}
+        /* 中間圖片：正圓形、邊框、固定寬高 */
+        .img-center {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;   /* 設定 50% 達成正圓形 */
+            border: 1px solid #333; /* 加上黑色邊框 */
+            object-fit: cover;    /* 關鍵：防止圖片變形 */
+        }
 
-/* 中間圓形 */
-.circle {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid #999;
-    object-fit: cover;
-}
-
-/* 右圖：會變形 */
-.img-right {
-    width: 33%;
-    height: 300px;
-    /* 沒有 object-fit → 會變形 */
-}
-</style>
+        /* 右側圖片：寬度33%、有變形 */
+        .img-right {
+            width: 33%;
+            /* 注意：這裡不設定 object-fit，圖片會因為強迫設定寬度而產生 distortion (擠壓變形) */
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="container">
-    <!-- 左圖 -->
-    <img src="https://picsum.photos/id/1011/600/400" class="img-left">
+    <img src="https://via.placeholder.com/600x800" alt="Paris" class="img-left">
 
-    <!-- 中間圓形 -->
-    <img src="https://picsum.photos/id/1015/600/400" class="circle">
+    <img src="https://via.placeholder.com/400" alt="Mountain" class="img-center">
 
-    <!-- 右圖 -->
-    <img src="https://picsum.photos/id/1011/600/400" class="img-right">
-</div>
+    <img src="https://via.placeholder.com/600x800" alt="Paris" class="img-right">
 
 </body>
 </html>
