@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Image Styling</title>
+<style>
+body {
+    background: #eee;
+    padding: 40px;
+    font-family: Arial;
+}
+
+/* 排版 */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 左圖：圓角 + 不變形 */
+.img-left {
+    width: 33%;
+    height: 300px;
+    border-radius: 18px;
+    object-fit: cover; /* 關鍵：不變形 */
+}
+
+/* 中間圓形 */
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #999;
+    object-fit: cover;
+}
+
+/* 右圖：會變形 */
+.img-right {
+    width: 33%;
+    height: 300px;
+    /* 沒有 object-fit → 會變形 */
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <!-- 左圖 -->
+    <img src="paris.jpg" class="img-left">
+
+    <!-- 中間圓形 -->
+    <img src="https://picsum.photos/id/1015/600/400" class="circle">
+
+    <!-- 右圖 -->
+    <img src="paris.jpg" class="img-right">
+</div>
+
+</body>
+</html>
