@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Button Demo</title>
+
+<style>
+    body {
+        font-family: Roboto, Arial, sans-serif;
+        background-color: #f6f6f6;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .container {
+        width: 500px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 按鈕樣式（符合題目） */
+    .info-btn {
+        margin-top: 15px;
+        height: 22px;
+        line-height: 22px;
+        padding: 0 12px;
+        border-radius: 8px;
+        border: 1px solid #2f2f2f;
+        background-color: #ffffff;
+        font-size: 13px;
+        color: #2f2f2f;
+        cursor: pointer;
+    }
+
+    .info-btn:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* 詳細資訊區塊 */
+    .info-box {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #e8f5e9;
+        border: 1px solid #ccc;
+        display: none; /* 預設隱藏 */
+        text-align: left;
+        font-size: 13px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <img src="https://picsum.photos/450/240" alt="sample image">
+
+    <button class="info-btn" onclick="toggleInfo()">顯示資訊</button>
+
+    <div id="info" class="info-box">
+        <p><strong>圖片名稱：</strong>sample.jpg</p>
+        <p><strong>尺寸：</strong>450 x 240</p>
+        <p><strong>上傳日期：</strong>2026/04/27</p>
+        <p><strong>描述：</strong>這是一張示範圖片。</p>
+    </div>
+</div>
+
+<script>
+function toggleInfo() {
+    const box = document.getElementById("info");
+
+    if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+    } else {
+        box.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
