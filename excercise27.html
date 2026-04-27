@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Task</title>
+    <style>
+        /* 基本樣式設定 */
+        body {
+            background-color: #58b2f3; /* 背景藍色 */
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            background-color: white;
+            width: 100%;
+            max-width: 800px;
+            padding: 15px;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        /* 區塊共通樣式 */
+        .section {
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* 綠色頂部 */
+        .header {
+            background-color: #add95b;
+            height: 120px;
+            width: 100%;
+        }
+
+        /* 中間青色區塊容器 */
+        .mid-group {
+            display: flex;
+            flex-direction: row; /* 桌機版預設並排 */
+            gap: 10px;
+        }
+
+        .mid-item {
+            background-color: #17bdd3;
+            height: 100px;
+            flex: 1; /* 等分寬度 */
+        }
+
+        /* 底部淺灰色區塊容器 */
+        .bottom-group {
+            display: flex;
+            flex-wrap: wrap; /* 允許換行以支援手機版 2x2 */
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .bottom-item {
+            background-color: #f0f2f5;
+            height: 40px;
+            flex: 1 1 calc(25% - 10px); /* 桌機版 4 個一排 */
+        }
+
+        /* --- 響應式關鍵：當寬度小於 480px 時 --- */
+        @media (max-width: 480px) {
+            .mid-group {
+                flex-direction: column; /* 變為垂直堆疊 (a) */
+            }
+
+            .mid-item {
+                height: 60px; /* 手機版高度稍微縮小 */
+            }
+
+            .bottom-item {
+                /* 手機版變為 2x2 佈局 */
+                flex: 1 1 calc(50% - 10px); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section header"></div>
+
+        <div class="mid-group">
+            <div class="section mid-item"></div>
+            <div class="section mid-item"></div>
+            <div class="section mid-item"></div>
+        </div>
+
+        <div class="bottom-group">
+            <div class="section bottom-item"></div>
+            <div class="section bottom-item"></div>
+            <div class="section bottom-item"></div>
+            <div class="section bottom-item"></div>
+        </div>
+    </div>
+
+</body>
+</html>
